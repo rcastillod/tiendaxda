@@ -1,0 +1,80 @@
+.newsletter {
+    color: map-get($white-color, '900' );
+    display: grid;
+    grid-template-columns: auto 3.75rem;
+
+    &__content {
+        background-color: map-get($primary-color, '900' );
+        display: flex;
+        flex-direction: column;
+        gap: .9375rem;
+        padding: 3.125rem;
+        @include breakpoint-up(map-get($breakpoints, 'large')) {
+            padding: 2.1875rem 6.25rem 6.25rem;
+        }
+        @include breakpoint-up(map-get($breakpoints, 'medium')) {
+            padding: 3.125rem 6.25rem;
+        }
+    }
+    &__title {
+        font-size: map-get($sizes, '2x-large' );
+        font-weight: map-get($heading-fw, 'regular' );
+        letter-spacing: .0625rem;
+    }
+
+    &__subscribe {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        a {
+            color: map-get($primary-color, '900' );
+            display: block;
+            font-family: $heading-ff;
+            font-size: 1.625rem;
+            position: relative;
+            text-decoration: none;
+            text-orientation: sideways;
+            writing-mode: vertical-rl;
+        }
+    }
+}
+
+.form {
+    .form__group {
+        display: flex;
+        flex-direction: column;
+        gap: .3125rem;
+        label {
+            font-family: $heading-ff;
+        }
+        input {
+            border: 0;
+            padding: .3125rem .625rem;
+            &:focus,
+            &:active {
+                outline: none;
+            }
+            &::-webkit-input-placeholder {
+                color: map-get($primary-color, '900');
+                font-size: map-get($sizes, 'small' );
+            }
+            &::-moz-placeholder {
+                color: map-get($primary-color, '900');
+                font-size: map-get($sizes, 'small' );
+            }
+            &:-ms-input-placeholder {
+                color: map-get($primary-color, '900');
+                font-size: map-get($sizes, 'small' );
+            }
+            &::-ms-input-placeholder {
+                color: map-get($primary-color, '900');
+                font-size: map-get($sizes, 'small' );
+            }
+            &::placeholder {
+                color: map-get($primary-color, '900');
+                font-size: map-get($sizes, 'small' );
+            }
+        }
+    }
+}

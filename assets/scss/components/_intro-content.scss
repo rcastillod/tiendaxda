@@ -1,0 +1,38 @@
+.intro {
+    display: flex;
+    flex-direction: column;
+    gap: 1.875rem;
+    padding: 3.125rem;
+    @include breakpoint-up(map-get($breakpoints, 'large')) {
+        padding: 6.25rem;
+    }
+    @include breakpoint-up(map-get($breakpoints, 'medium')) {
+        padding: 3.125rem 6.25rem;
+    }
+    &__title {
+        font-size: 2.5rem;
+        line-height: 1.2;
+        max-width: 100%;
+        text-transform: uppercase;
+        @include breakpoint-up(map-get($breakpoints, 'large')) {
+            max-width: 14ch;
+        }
+        @include breakpoint-up(map-get($breakpoints, 'medium')) {
+            font-size: map-get($sizes, '3x-large' );
+            max-width: 18ch;
+        }
+    }
+    &__text {
+        max-width: 100%;
+        @include breakpoint-up(map-get($breakpoints, 'large')) {
+            max-width: 30ch;
+        }
+        @include breakpoint-up(map-get($breakpoints, 'medium')) {
+            max-width: 52ch;
+        }
+        p {
+            color: map-get($primary-color, '800' );
+            font-size: map-get($sizes, 'large' );
+        }
+    }
+}

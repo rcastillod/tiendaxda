@@ -1,0 +1,52 @@
+.navbar {
+    #toggler,
+    label {
+        display: none;
+    }
+
+    @include breakpoint-down(map-get($breakpoints, 'medium')) {
+        .menu {
+            max-height: 0;
+            overflow: hidden;
+            padding: 0;
+            width: 100%;
+            &__list {
+                align-items: center;
+                flex-direction: column;
+                padding: 1.25rem;
+            }
+        }
+
+        label {
+            align-items: center;
+            cursor: pointer;
+            display: inline-flex;
+            margin-inline-end: 50px;
+            i {
+                color: map-get($primary-color, '900' );
+                font-size: 1.875rem;
+            }
+        }
+
+        #toggler:checked ~ .menu {
+            max-height: 100%;
+        }
+
+    }
+}
+
+.menu {
+    padding-inline: 6.25rem;
+    
+    &__list {
+        display: flex;
+        gap: 3.125em;
+        list-style-type: none;
+        a {
+            color: map-get($primary-color, '900' );
+            font-weight: map-get($text-fw, 'bold' );
+            text-decoration: none;
+        }
+    }
+    
+}

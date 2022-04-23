@@ -23,15 +23,20 @@
 /*                                   Layout                                   */
 /* -------------------------------------------------------------------------- */
 @import 
-    'layout/header';
+    'layout/header',
+    'layout/grid',
+    'layout/content';
 
 /* -------------------------------------------------------------------------- */
 /*                                 Components                                 */
 /* -------------------------------------------------------------------------- */
 @import 
     'components/nav',
-    'components/nav-toggler',
-    'components/buttons';
+    'components/logo',
+    'components/intro-content',
+    'components/hero',
+    'components/buttons',
+    'components/newsletter';
 
 /* -------------------------------------------------------------------------- */
 /*                                    Pages                                   */

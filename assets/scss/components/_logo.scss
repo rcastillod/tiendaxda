@@ -1,0 +1,13 @@
+// Logo
+.logo {
+    background-color: map-get($primary-color, '900' );
+    color: map-get($white-color, '900' );
+    font-family: $heading-ff;
+    font-size: map-get($sizes, 'x-large' );
+    padding: 1.25em;
+    text-transform: uppercase;
+    text-decoration: none;
+    @include breakpoint-up(map-get($breakpoints, 'medium')) {
+        font-size: map-get($sizes, '2x-large' );
+    }
+}
