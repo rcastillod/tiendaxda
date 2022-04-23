@@ -1,0 +1,57 @@
+/* ------ Colors ------ */
+
+// Primary Color
+$primary-color: (
+    '900': #0C0910,
+    '800': #646266,
+    '700': #A6A5A8,
+);
+
+// White Color
+$white-color: (
+    '900': #FFFFFF,
+    '800': #ECECEC,
+    '700': #D1D1D1,
+);
+
+/* ------ Fonts ------ */
+
+// Families
+$text-ff: 'Raleway', sans-serif;
+$heading-ff: 'Old Standard TT', serif;
+
+// Sizes
+$sizes: (
+    '3x-large': 3.125rem,
+    '2x-large': 1.875rem,
+    'x-large': 1.25rem,
+    'large': 1.125rem,
+    'medium': 1rem,
+    'small': .875rem,
+    'x-small': .75rem
+);
+
+// Weights
+$text-fw: (
+    'bold': 700,
+    'regular': 400,
+);
+    
+$heading-fw: (
+    'bold': 700,
+    'regular': 400
+);
+
+/* ------ Breakpoints ------ */
+
+$breakpoints: (
+    'small': 576px,
+    'medium': 768px,
+    'large': 992px,
+    'xl': 1200px,
+);
+
+/* ------ Border ------ */
+
+// Radius
+$br: 1.875rem;
