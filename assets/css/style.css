@@ -114,10 +114,20 @@ select {
   align-items: center;
 }
 
+.grid-wrapper {
+  height: 100vh;
+}
+
 .main-grid {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 25rem auto;
+  grid-template-rows: 18.75rem auto;
+  height: 100%;
+}
+@media (min-width: 768px) {
+  .main-grid {
+    grid-template-rows: 25rem auto;
+  }
 }
 @media (min-width: 992px) {
   .main-grid {

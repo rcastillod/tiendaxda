@@ -1,11 +1,22 @@
+// Grid Wrapper
+.grid-wrapper {
+    height: 100vh;
+}
 // Grid
 .main-grid {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 25rem auto;
+    grid-template-rows: 18.75rem auto;
+    height: 100%;
     
+    @include breakpoint-up(map-get($breakpoints, 'medium')) {
+        // grid-template-columns: 1fr;
+        grid-template-rows: 25rem auto;
+    }
     @include breakpoint-up(map-get($breakpoints, 'large')) {
         grid-template-columns: 40% 60%;
         grid-template-rows: 1fr;
     }
+
+
 }
