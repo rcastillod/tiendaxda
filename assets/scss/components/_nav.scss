@@ -37,6 +37,7 @@
 
 .menu {
     padding-inline: 6.25rem;
+    @extend %animation-properties;
     
     &__list {
         display: flex;

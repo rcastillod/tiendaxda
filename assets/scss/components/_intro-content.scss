@@ -3,6 +3,7 @@
     flex-direction: column;
     gap: 1.875rem;
     padding: 3.125rem;
+    @extend %animation-properties;
     @include breakpoint-up(map-get($breakpoints, 'large')) {
         padding: 6.25rem;
     }

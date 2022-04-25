@@ -20,13 +20,37 @@
         font-size: map-get($sizes, '2x-large' );
         font-weight: map-get($heading-fw, 'regular' );
         letter-spacing: .0625rem;
+        @extend %animation-properties;
     }
 
     &__subscribe {
         align-items: center;
+        background-color: map-get($white-color, '900' );
         display: flex;
         flex-direction: column;
         justify-content: center;
+        position: relative;
+        @extend %animation-properties;
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 0;
+            background-color: map-get($primary-color, '800' );
+            transition: width 250ms cubic-bezier(0.7, 0, 0.2, 1);
+        }
+        &:hover,
+        &:focus {
+            &::before,
+            &::before {
+                width: 100%;
+            }
+            a {
+                color: map-get($white-color, '900' );
+            }
+        }
         a {
             color: map-get($primary-color, '900' );
             display: block;
@@ -41,6 +65,7 @@
 }
 
 .form {
+    @extend %animation-properties;
     .form__group {
         display: flex;
         flex-direction: column;
