@@ -1,11 +1,17 @@
 .hero {
-    // background-image: url(../img/imagen1.png);
     background-position: top center;
     background-repeat: no-repeat;
     background-size: cover;
     overflow: hidden;
     position: relative;
     animation: bg-fade 1.5s linear forwards;
+    
+    @include breakpoint-up(map-get($breakpoints, 'medium')) {
+        background-position: center 30%;
+    }
+    @include breakpoint-up(map-get($breakpoints, 'large')) {
+        background-position: top center;
+    }
 
     &::before,
     &::after {

@@ -292,6 +292,16 @@ select {
   position: relative;
   animation: bg-fade 1.5s linear forwards;
 }
+@media (min-width: 768px) {
+  .hero {
+    background-position: center 30%;
+  }
+}
+@media (min-width: 992px) {
+  .hero {
+    background-position: top center;
+  }
+}
 .hero::before, .hero::after {
   content: "";
   position: absolute;
